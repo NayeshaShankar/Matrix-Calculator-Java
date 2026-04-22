@@ -19,7 +19,7 @@ public class Matrixxx {
         frame.setSize(700, 600);
         frame.setLayout(new BorderLayout());
 
-        // 🔹 Top Panel
+      
         JPanel top = new JPanel();
         top.add(new JLabel("Rows:"));
         rowsField = new JTextField(5);
@@ -34,7 +34,7 @@ public class Matrixxx {
 
         frame.add(top, BorderLayout.NORTH);
 
-        // 🔹 Center Panel with Titles
+        
         JPanel center = new JPanel(new GridLayout(1, 3));
 
         panelA = new JPanel();
@@ -59,7 +59,7 @@ public class Matrixxx {
 
         frame.add(center, BorderLayout.CENTER);
 
-        // 🔹 Bottom Panel
+     
         JPanel bottom = new JPanel();
 
         JButton addBtn = new JButton("Add");
@@ -102,16 +102,16 @@ public class Matrixxx {
             panelB.revalidate();
         });
 
-        // 🔹 Add
+        
         addBtn.addActionListener(e -> calculate("+"));
 
-        // 🔹 Subtract
+        
         subBtn.addActionListener(e -> calculate("-"));
 
-        // 🔹 Multiply
+      
         mulBtn.addActionListener(e -> calculate("*"));
 
-        // 🔹 Clear Button
+       
         clearBtn.addActionListener(e -> {
             panelA.removeAll();
             panelB.removeAll();
@@ -128,7 +128,7 @@ public class Matrixxx {
         frame.setVisible(true);
     }
 
-    // 🔹 Calculation
+   
     static void calculate(String op) {
         int rows = matrixA.length;
         int cols = matrixA[0].length;
@@ -156,7 +156,7 @@ public class Matrixxx {
         showResult(result, rows, cols);
     }
 
-    // 🔹 Show Result
+   
     static void showResult(int[][] result, int rows, int cols) {
 
         resultPanel.removeAll();
